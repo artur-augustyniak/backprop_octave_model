@@ -1,0 +1,52 @@
+Release notes for 0.1.9
+=======================
+
+* new function subset which helps preparing
+  the data sets on a simple way
+
+The version number jump from 0.1.3 to 0.1.9
+happens because on octave-forge a lot of updates
+happens in the meantime. So the version numbers
+should be the same now (as soon as the next
+update is done on octave-forge)
+
+Release notes for 0.1.3
+=======================
+
+* new transfer function for newff: logsig
+
+Release notes for 0.1.2
+=======================
+
+* the same like 0.1.0, removed only two errors
+
+Release notes for 0.1.0
+========================
+
+* changed to this version because cvs can't handle
+  the old version number style ...
+* it's still the same like 0.0.2-39
+
+Release notes for 0.0.2-39
+==========================
+
+* more than only one hidden layer possible
+
+Release notes for 0.0.1
+=======================
+
+* now Levenberg-Marquardt should
+  work properly
+* more targets available, this means more than one
+  output neuron
+
+Release notes for 0.0.1-alpha
+==============================
+
+New features:
+
+* Multi Layer Perceptrons with one hidden layer
+* Levenberg-Marquardt algorithm
+* mse performance function
+* tansig & purelin transfer functions
+

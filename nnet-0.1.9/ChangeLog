@@ -1,0 +1,352 @@
+2008-10-10  Michel D. Schmid
+
+  * checked in Release 0.1.9
+
+2008-10-09  Michel D. Schmid
+
+  * improved createTestDocu.pl in directory doc/latex/perl
+  * modified doc/latex/common/version.tex
+  * modified doc/latex/developers/title.tex
+
+2008-10-08  Michel D. Schmid
+
+  * add tests/test_nnet_win32.pl
+  * minor modifications in tests/readme
+  * some more tests to inst/subset.m
+
+2008-10-07  Michel D. Schmid
+
+  * add __rerangecolumns.m
+  * add __analyzerows.m
+  * add __optimizedatasets.m
+
+2008-10-06  Michel D. Schmid
+
+  * some test infos in __randomisecols.m
+  * add __copycoltopos1.m
+  * add tests/nnetTest.m
+  * modified tests/readme
+  * renamed tests/MLP/nnetTest.m to tests/MLP/nnetTestMLP.m
+
+2008-09-17  Michel D. Schmid
+
+  * some license update
+
+2008-09-08  Michel D. Schmid
+
+  * corrected typing error in __calcjacobian.m
+  * new subfunction __randomisecols.m
+
+2008-08-26  Michel D. Schmid
+
+  * modified INDEX
+  * some more files in the tests subdirectory
+  * minor code change in __trainlm.m
+  * minor code changes in tests/MLP/example1/*.m
+  * minor code changes in tests/MLP/example2/*.m
+  * minor code changes in tests/MLP/MLPScripts.m
+
+2008-08-25  Michel D. Schmid
+
+  * renamed example 1 in docu MLP9_1_1.m to MLP9_1_1.m_template
+  * started with new function file subset
+  * add new function file subset
+
+2008-08-15  Michel D. Schmid
+
+  * removed bug in poststd
+  * optimized code in poststd
+
+2008-08-14  Michel D. Schmid
+
+  * improvements in the documentation
+
+2008-08-12  Michel D. Schmid
+
+  * add subdirectory example2 in tests
+  * add "readme" in tests
+  * add "MLPScripts" in tests/MLP
+
+2008-01-04  Michel D. Schmid
+
+  * removed a question about COPYRIGHT from the user's guide documentation
+  * some changes in the developers documentation
+
+2007-10-19  Michel D. Schmid
+
+  * add new test file testExample1 incl. complete subdirectory
+
+2007-10-18  Michel D. Schmid
+
+  * modified __trainlm for searching for
+    gnuplot on windows systems
+  * created preparedata9_x_2.m, preparedata9_x_3.m for test purpose
+  * modified test file testExample1
+  * add performance plot! but I'm still not happy about it
+
+2007-09-10  Michel D. Schmid
+
+  * add some tests to purelin.m
+
+2007-09-09  Michel D. Schmid
+
+  * add \n to the stop messages in __trainlm.m in sub-function stopifnecessary
+
+2007-08-31  Michel D. Schmid
+
+  * optimized tests in isposint.m
+
+2007-08-27  Michel D. Schmid
+
+  * add 3 new tests to min_max.m
+
+2007-07-31  Michel D. Schmid
+
+  * add new section to  __init.m to use it with newp
+  * small modifications in __newnetwork.m to use it with newp
+  * small correction in __newnetwork.m
+  * add newp.m
+
+2007-07-27  Michel D. Schmid
+
+  * updated docus
+  * a lot of minor changes in the most files
+  * completed implementation of logsig
+
+2007-07-17  Michel D. Schmid
+
+  * removed bugs in __calcjacobian.m
+  * add example2 in tests/MLP with logsig as transfer function
+
+2007-07-15  Michel D. Schmid
+
+  * removed bugs in train.m & __trainlm.m if train is called
+    with only 3 parameters, this means without validation
+
+2007-07-02  Michel D. Schmid
+
+  * __newnetwork.m: deleted 3 rows of comment code
+  * newff.m: some more comments
+  * __trainlm.m: moved startTime = clock(); 9 rows below actual position
+  * __calcperf.m: add logsig transfer function
+  * __calcjacobian.m: add logsig transfer function
+  * __checknetstruct.m: removed obsolete code
+  * sim.m: add logsig transfer function
+  * renamed first derivatives of some transfer functions:
+    - dlogsig -> __dlogsig
+    - dtansig -> __dtansig
+    - dpurelin -> __dpurelin
+    
+  * user's Guide:
+    - add logsig.asy, logsiglogo.asy purelin.asy purelinlogo.asy
+
+2007-06-26  Michel D. Schmid
+
+  * __trainlm.m: only coding guideline correction
+  * __calcperf.m: some more comments
+
+2007-06-25  Michel D. Schmid
+
+  * added satlin.m dsatlin.m satlins.m dsatlins.m logsig.m
+    dlogsig.m poslin.m dposlin.m
+  * removed subversion control strings in dtansig.m dpurelin.m
+
+2007-06-14  Michel D. Schmid
+
+  * removed a bug in newff, reported by Andreas Verling
+
+2007-05-21  Michel D. Schmid
+
+  * removed a bug which occurs in octave-2.9.10
+
+2007-05-15  Michel D. Schmid
+
+  * added 7 tests in isposint.m
+  2. Developer's Guide
+  --------------------
+  * removed tansig.eps and tansig.pdf in doc\latex\asymptote\transferFunctions
+  * removed header and footer definitions in neuralNetworkToolboxForOctave.tex
+
+2007-05-14  Michel D. Schmid
+
+  1. User's Guide
+  ----------------
+  * removed matlab directory
+  * add neuro_toolbox/graphics directory
+  * add doc/latex/asymptote/* directory and all subdirectories to
+    add scripts for creating plots
+  * add neuro_toolbox/tansig.tex
+
+  * updated: newff.tex, neuro_toolbox.tex,title2.tex,numbering.tex
+  
+  2. Developer's Guide
+  ---------------------
+  * removed matlab directory
+  
+  * updated: octave.tex,title.tex
+
+2007-05-11  Michel D. Schmid
+
+  * add one file:__printNetworkType
+    this is inserted in saveMLPStruct and will print
+    the network type e.g. feed-forward multi-layer network
+  * improved: __checknetstruct.m
+              __printMLPHeader.m
+              __saveMLPStruct
+  * inserted "network type" in:
+             newff.m
+             __newnetwork.m
+  * removed one bug in __newnetwork.m since octave version 2.9.10
+
+2007-05-07  Michel D. Schmid
+
+  * change svn repository to the same content like the cvs repository
+    of octave-forge:
+    - deleted following directories:
+      1. demos
+      2. src
+    - added following directories:
+      1. inst
+      2. doc/pdf
+
+    - added Makefile,DESCRIPTION,INDEX to the top level directory
+    - renamed all files with underscore for private functions without:
+      dpurelin.m,dtansig.m,isposint.m,min_max.m,newff.m,poststd.m,prestd.m
+      purelin.m,saveMLPStruct.m,sim.m,tansig.m,train.m,trastd.m
+    - added in doc/pdf a pdf version of neuralNetworkToolboxForOctaveUsersGuide.pdf
+
+
+2007-02-18  Michel D. Schmid
+
+  * complete code redesign in following directories:
+    1. src and all subdirectories
+    2. tests/MLP
+  * some minor changes in the latex source of the documentation
+
+2006-11-16  Michel D. Schmid
+
+  * some corrections in neuralNetworkToolboxForOctaveUsersGuide.tex...
+  * update of INSTALL and Readme
+  * one new function: poststd 
+
+2006-08-20  Michel D. Schmid
+
+  * inserted some keyword of svn
+  * new release 0.0.2-39
+
+2006-08_18  Michel D. Schmid
+
+  * completed texinfo and coments in
+    - mse.m
+    - min_max.m
+    - isposint.m
+
+2006-08-15  Michel D. Schmid
+
+  * now, more than one hidden layer is working properly
+    changes in
+    - calcjacobian
+    - trainlm
+    - setx
+
+2006-07-27  Michel D. Schmid
+
+  * redesigned "setx" for more than one hidden layer
+
+2006-07-26  Michel D. Schmid
+
+  * some important improvements to "crack" more than one hidden layer
+    - train
+    - calcperf
+    - getx
+
+2006-07-25  Michel D. Schmid
+
+  * some improvements in subfunctions of saveMLPStruct directory
+  * improvements to kill the last limitation in newff,network,init
+
+2006-07-23  Michel D. Schmid
+
+  * some improvements in subfunctions of saveMLPStruct directory
+
+2006-07-16  Michel D. Schmid
+
+  * add again the before deleted files.. with new names..
+    1. stopifnecessary
+    2. showtrainprogress
+  * updated newff,trainlm
+
+2006-07-16  Michel D. Schmid
+
+  * removed 2 files for name redesign
+     1. stopIfNecessary
+     2. showProgress... or so :-(
+
+2006-07-16  Michel D. Schmid
+
+  * test because some troubles with writing into the repository
+
+2006-07-03  Michel D. Schmid
+
+  * redesign of sim code
+
+2006-06-20	Michel D. Schmid
+  
+  * add 3 forgotten files..
+  
+
+2006-06-19  Michel D. Schmid
+
+  * updated the texinfo parts of the most files
+  * updated User's Guide dvi & pdf
+  * added 2 more tests
+    - MLP9_2_3.m
+    - MLP9_5_3.m
+
+2006-06-16  Michel D. Schmid
+
+  * deleted the src/test directory...
+  * deleted old demo "MLP3"
+  * add new demo MLP9_2_2.m
+  * add new funcionality wrt. Levenberg-Marquardt algorithm
+    this are a lot changes in a lot files...
+  * add new ./tests/MLP directory
+  * add three tests with MATLAB(TM) to compare...
+  
+2006-06-02  Michel D. Schmid
+
+  * Add demo MLP3, a MLP network 9-1-1 with data set...
+  * updated developer's guide
+
+2006-05-30  Michel D. Schmid
+
+  * updated user's guide
+
+2006-05-26  Michel D. Schmid
+
+  * add INSTALL,README and ReleaseNotes.txt
+
+2006-05-26  Michel D. Schmid
+
+  * all m-files improved and cleand of unnecessary comments..
+
+2006-05-26  Michel D. Schmid
+
+  * add sim.m
+  * improved texinfo of trastd
+  * add file COPYING (general public license)
+
+2006-05-24  Michel D. Schmid
+
+  * improved calcjacobian
+  * add one ";" to saveMLPStruct.m
+
+2006-05-23  Michel D. Schmid
+
+  * add latex documentation
+  * add first test MLP2
+  * update MLP2
+
+2006-05-23	Michel D. Schmid
+
+	* inital import

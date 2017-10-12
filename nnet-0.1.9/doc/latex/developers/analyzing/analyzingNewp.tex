@@ -1,0 +1,254 @@
+\section{analyzing newp}
+
+
+Following command will be used, to create a new neural perceptron:\\
+\noindent net = newfp(mMinMaxElements,nNeurons);\\
+
+newp is the matlab command, mMinMaxElements is a $Rx2$-Matrix with minimum and maximum values of the inputs. $R$ is equal to the number of input neurons. \\
+
+net = newp([0 1; -2 2],1)
+
+\begin{verbatim}
+net =
+
+    Neural Network object:
+
+    architecture:
+
+         numInputs: 1
+         numLayers: 1
+       biasConnect: [1]
+      inputConnect: [1]
+      layerConnect: [0]
+     outputConnect: [1]
+     targetConnect: [1]
+
+        numOutputs: 1  (read-only)
+        numTargets: 1  (read-only)
+    numInputDelays: 0  (read-only)
+    numLayerDelays: 0  (read-only)
+
+    subobject structures:
+
+            inputs: {1x1 cell} of inputs
+            layers: {1x1 cell} of layers
+           outputs: {1x1 cell} containing 1 output
+           targets: {1x1 cell} containing 1 target
+            biases: {1x1 cell} containing 1 bias
+      inputWeights: {1x1 cell} containing 1 input weight
+      layerWeights: {1x1 cell} containing no layer weights
+
+    functions:
+
+          adaptFcn: 'trains'
+           initFcn: 'initlay'
+        performFcn: 'mae'
+          trainFcn: 'trainc'
+
+    parameters:
+
+        adaptParam: .passes
+         initParam: (none)
+      performParam: (none)
+        trainParam: .epochs, .goal, .show, .time
+
+    weight and bias values:
+
+                IW: {1x1 cell} containing 1 input weight matrix
+                LW: {1x1 cell} containing no layer weight matrices
+                 b: {1x1 cell} containing 1 bias vector
+
+    other:
+
+          userdata: (user stuff)
+\end{verbatim}
+\textit{numInputs: 1}: one input layer\\
+\noindent \textit{numLayers: 1}: one output layer\\
+\noindent \textit{biasConnect: [1]}: unknown till now!!\\
+\noindent \textit{inputConnect: [1]}: unknown till now!!\\
+\noindent \textit{layerConnect: [0]}: unknown till now!!\\
+\noindent \textit{outputConnect: [1]}: unknown till now!!\\
+\noindent \textit{targetConnect: [1]}: unknown till now!!\\
+\noindent \textit{numOutputs: 1  (read-only)}: unknown till now!!\\
+\noindent \textit{numTargets: 1  (read-only)}: unknown till now!!\\
+\noindent \textit{numInputDelays: 0  (read-only)}: unknown till now!!\\
+\noindent \textit{numLayerDelays: 0  (read-only)}: unknown till now!!\\
+\noindent \textit{inputs: {1x1 cell} of inputs}: input layer definition\\
+Because we have defined only one input layer, you can see the detailed definition with
+following command in the matlab prompt:\\
+\begin{verbatim}
+>> net.inputs{1}
+
+ans =
+
+       range: [2x2 double]
+        size: 2
+    userdata: [1x1 struct]
+    
+net.inputs{1}.range
+
+ans =
+
+     0     1
+    -2     2
+    
+net.inputs{1}.size
+
+ans =
+
+     2
+     
+net.inputs{1}.userdata
+
+ans =
+
+    note: 'Put your custom input information here.'
+\end{verbatim}
+range are the min. and max. values of the inputs. size is the number of input neurons and userdata are user specified inputs...!\\
+\noindent \textit{layers: {1x1 cell} of layers}: actually no idea what's inside this cell!!!\\
+To see the details of this layer definition, we have to enter:
+\begin{verbatim}
+net.layers{1}
+
+ans = 
+
+     dimensions: 1
+    distanceFcn: ''
+      distances: []
+        initFcn: 'initwb'
+    netInputFcn: 'netsum'
+      positions: 0
+           size: 1
+    topologyFcn: 'hextop'
+    transferFcn: 'hardlim'
+       userdata: [1x1 struct]
+\end{verbatim}
+and for the output layer:
+\begin{verbatim}
+net.outputs{1}
+
+ans = 
+
+        size: 1
+    userdata: [1x1 struct]
+\end{verbatim}
+
+\begin{verbatim}
+ net.outputs{1}.userdata
+
+ans = 
+
+    note: 'Put your custom output information here.'
+\end{verbatim}
+
+\begin{verbatim}
+net.targets
+
+ans = 
+
+    [1x1 struct]
+\end{verbatim}
+
+\begin{verbatim}
+net.targets{1}
+
+ans =
+
+        size: 1
+    userdata: [1x1 struct]
+\end{verbatim}
+
+\begin{verbatim}
+net.targets{1}.userdata
+
+ans = 
+
+    note: 'Put your custom output information here.'
+\end{verbatim}
+
+\begin{verbatim}
+net.biases{1}
+
+ans =
+
+       initFcn: 'initzero'
+         learn: 1
+      learnFcn: 'learnp'
+    learnParam: []
+          size: 1
+      userdata: [1x1 struct]
+\end{verbatim}
+
+
+\begin{verbatim}
+net.biases{1}.userdata
+
+ans =
+
+    note: 'Put your custom bias information here.'
+\end{verbatim}
+
+
+\begin{verbatim}
+net.inputWeights
+
+ans = 
+
+    [1x1 struct]
+\end{verbatim}
+
+
+\begin{verbatim}
+net.inputWeights{1}
+
+ans = 
+
+        delays: 0
+       initFcn: 'initzero'
+         learn: 1
+      learnFcn: 'learnp'
+    learnParam: []
+          size: [1 2]
+      userdata: [1x1 struct]
+     weightFcn: 'dotprod'
+\end{verbatim}
+
+\begin{verbatim}
+net.layerWeights
+
+ans = 
+
+    {[]}
+\end{verbatim}
+
+\begin{verbatim}
+net.LW
+
+ans = 
+
+    {[]}
+\end{verbatim}
+
+\begin{verbatim}
+net.IW
+
+ans = 
+
+    [1x2 double]
+\end{verbatim}
+
+\begin{verbatim}
+net.IW{1}
+
+ans =
+
+     0     0
+\end{verbatim}
+
+\begin{verbatim}
+net.b
+
+ans = 
+
+    [0]
+\end{verbatim}

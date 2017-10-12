@@ -1,0 +1,26 @@
+nnet >> Neural Networks
+
+Creation
+ newff
+
+Data pre- & postprocessing
+ prestd
+ poststd
+ trastd
+
+Simulation
+ sim
+
+Training
+ train
+
+Transfer functions
+ logsig
+ purelin
+ tansig
+
+Utility
+ isposint
+ min_max
+ saveMLPStruct
+ subset

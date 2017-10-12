@@ -1,0 +1,32 @@
+# Created by Octave 3.2.4, Sun Mar 31 16:02:06 2013 CEST <artur@desktop-debian>
+# name: B
+# type: cell
+# rows: 3
+# columns: 1
+# name: <cell-element>
+# type: matrix
+# rows: 7
+# columns: 1
+ 0.01807551477342351
+ 0.03478698590524565
+ 0.9722936483219988
+ -0.1960740754231535
+ -0.1319451963151556
+ 0.3100348666468751
+ -0.8694101106816167
+# name: <cell-element>
+# type: matrix
+# rows: 3
+# columns: 1
+ -0.9259126328916633
+ -0.1343074008210779
+ 0.2118354994635263
+# name: <cell-element>
+# type: matrix
+# rows: 4
+# columns: 1
+ 0.7735669256242312
+ -0.6006674123257906
+ 0.8222226867494222
+ -0.6913039032946661
+

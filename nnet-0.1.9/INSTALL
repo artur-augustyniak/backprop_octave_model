@@ -1,0 +1,24 @@
+Install instructions for Octave's neural network toolbox 0.1.0:
+===============================================================
+
+1. Install with Octave >= 2.9.10
+2. Install with Octave < 2.9.10
+
+1. Install with Octave >=2.9.10
+-------------------------------
+Use the install description on the octave-forge webpage.
+Short description:
+ * download the nnet-0.1.0.tar.gz
+ * enter at the octave prompt pkg install nnet-0.1.0.tar.gz
+
+2. Install with Octave < 2.9.10
+-------------------------------
+At this moment no "./configure && make && make install" exists.
+So you can copy the complete nnet/... directory with all subdirectorys
+directly into the m-file directory of your Octave installation.
+On Linux systems this is normaly: /usr/local/share/octave/2.9.x/m
+Change x with your current octave version.
+
+Contact:
+========
+e-mail:michaelschmid@users.sourceforge.net
